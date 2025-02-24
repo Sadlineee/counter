@@ -13,7 +13,7 @@ export const CounterBox = styled.div`
   align-items: center;
   gap: 10px;
   aspect-ratio: 2 / 1;
-  margin-top: 30vh;
+  margin-top: 35vh;
   padding: 10px;
   height: 7.5rem;
   background-color: ${({ theme }) => theme.colors.bg};
