@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Metadata } from 'next'
 import { State, Styled, Theme } from '@/lib'
 import { ProviderProps } from '@/types/ProviderProps'
@@ -13,6 +14,9 @@ export default function RootLayout({ children }: Readonly<ProviderProps>) {
       <Theme>
         <Styled>
           <html>
+            <Head>
+              <link rel='icon' href='/favicon.ico' sizes='any' />
+            </Head>
             <body className={oswald.className}>
               {children}
             </body>
