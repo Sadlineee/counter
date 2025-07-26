@@ -1,28 +1,27 @@
-import Head from 'next/head'
 import { Metadata } from 'next'
 import { State, Styled, Theme } from '@/lib'
 import { ProviderProps } from '@/types/ProviderProps'
 import { oswald } from '@/fonts/fonts'
 
 export const metadata: Metadata = {
-  title: 'counter'
+  title: 'counter',
+  icons: {
+    icon: '/favicon.ico',
+  }
 }
 
 export default function RootLayout({ children }: Readonly<ProviderProps>) {
   return (
-    <State>
-      <Theme>
-        <Styled>
-          <html>
-            <Head>
-              <link rel='icon' href='/favicon.ico' sizes='any' />
-            </Head>
-            <body className={oswald.className}>
+    <html>
+      <body className={oswald.className}>
+        <State>
+          <Theme>
+            <Styled>
               {children}
-            </body>
-          </html>
-        </Styled>
-      </Theme>
-    </State>
+            </Styled>
+          </Theme>
+        </State>
+      </body>
+    </html>
   )
 }
